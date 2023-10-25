@@ -28,7 +28,7 @@ console.log("sum:", sum);
 console.log(`start of file read`);
 
 const writeText = (text) => {
-  fs.readFile("text.txt", { enounding: "utf8" }, (error, info) => {
+  fs.readFile("text.txt", { encoding: "utf8" }, (error, info) => {
     if (error) {
       console.log("Info", info);
     }
