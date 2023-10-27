@@ -83,6 +83,8 @@ app.get("/users", (req, res) => {
 //     .json({ message: "hereglegchiin medeelel shinechilegdlee", users });
 // });
 
+
+
 app.get("/api/users", (req, res) => {
   console.log("get all users");
   res.status(200).json({ message: "success" });
@@ -125,5 +127,26 @@ app.delete("/api/users/:userid", (req, res) => {
   }
   res.status(200).json({ message: `${userid} tai hereglegch ustgalaa` });
 });
+
+// app.put("/api/users/:id", (req, res)=> {
+//   const { usersid } = req.params;
+//   const {users} = JSON.parse(
+//     fs.readFileSync("users.json", {encoding: "utf-8"})
+//   );
+
+//   const index = users.findIndex((el)=> el.id === userid);
+//   if (index < 0) {
+//     res.status(400).json({message: `${userid} tai hereglegch oldsongui`});
+//   }else {
+//     users.splice(index, 1);
+
+//     fs.writeFileSync("user.json", JSON.stringify({users}), {
+//       encoding: "utf-8",
+//     });
+
+//   }
+//    res.status(200).json({message: "success"});
+// });
+
 
 app.listen(PORT, () => console.log(`Server is listening at ${PORT} port`));
