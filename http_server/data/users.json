@@ -1,1 +1,32 @@
-{"data":[{"id":"c7c8ee52-8c2f-401e-b5ee-875b15e2a77f","name":"Naraa","status":"offline","email":"naraa@email.mn","department":"technology"},{"id":"f5509f38-045c-4648-930f-7cd8172d09f8","name":"Baraa","status":"offline","email":"baraa@email.mn","department":"human resource"},{"id":"55275530-e30c-42ab-9ec7-737b70fa59c7","name":"temulen","status":"online","email":"amaraa@gmail.com","department":"technology"},{"id":"4a9e99b7-f6f3-4295-9393-e50f8ec84372","name":"saraa","status":"online","email":"amaraa@gmail.com","department":"technology"},{"id":"99b911f6-cb13-4d26-9314-fc153bf7479b","name":"saraa","status":"online","email":"amaraa@gmail.com","department":"technology"}]}
+{
+  "data": [
+    {
+      "id": "c7c8ee52-8c2f-401e-b5ee-875b15e2a77f",
+      "name": "Naraa",
+      "status": "offline",
+      "email": "naraa@email.mn",
+      "department": "technology"
+    },
+    {
+      "id": "072a8545-e82b-4ef8-8f92-32359ed0110c",
+      "name": "Saraa",
+      "status": "online",
+      "email": "saraa@email.mn",
+      "department": "marketing"
+    },
+    {
+      "id": "f5509f38-045c-4648-930f-7cd8172d09f8",
+      "name": "Baraa",
+      "status": "online",
+      "email": "baraa@email.mn",
+      "department": "human resource"
+    },
+    {
+      "id": "fe8c7e26-b016-475a-87af-8b257b4d7ea6",
+      "name": "Bataa",
+      "status": "online",
+      "email": "bataa@email.mn",
+      "department": "human resource"
+    }
+  ]
+}

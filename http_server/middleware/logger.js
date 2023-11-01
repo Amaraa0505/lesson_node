@@ -1,9 +1,24 @@
-const logger = (req, res, next) => {
-  console.log(
-    "LOG :" + `${req.method} : ${req.url} : ${new Date().toISOString()}`
-  );
+const { Router } = require("express");
 
-  next();
-};
+const {
+  createUser,
+  getAllUser,
+  getUserById,
+  updateUserById,
+  deleteUserById,
+} = require("../controller/userController");
 
-module.exports = { logger };
+const router = Router();
+
+router.route("/").get(getAllUser).post(createUser);
+
+router
+  .route(":userId")
+  .get(getUserById)
+  .put(updateUserById)
+  .delete(deleteUserById);
+
+// router.put("/:userId", updateUserById);
+// router.delete("/:userId", deleteUserById);
+
+module.exports = router;
