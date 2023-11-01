@@ -1,5 +1,12 @@
 const express = require("express");
 
+const logWrite = () => {
+  const logWinston = winston.createLogger({
+    level: "info",
+    format: "",
+  });
+};
+
 const { logger } = require("./middleware/logger");
 const userRoutes = require("./routes/userRoutes");
 
