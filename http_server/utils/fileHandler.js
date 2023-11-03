@@ -5,8 +5,9 @@ const p = path.join(__dirname, "../data/");
 
 const readFile = (fileName) => {
   try {
+    console.log(p + fileName)
     const { data } = JSON.parse(
-      fs.readFileSync(p + fileName, {
+      fs.readFileSync(p+fileName, {
         encoding: "utf-8",
       })
     );

@@ -1,7 +1,8 @@
 const fs = require("fs");
+//object oriented programming
 exports.MyLog = class MyLog {
   constructor() {
-    this.fileName = "";
+    this.amraa = "";
   }
 
   log(message, level = "success") {
