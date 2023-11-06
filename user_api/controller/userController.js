@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require("uuid");
 const { readFile, writeFile } = require("../utils/fileHandler");
+const bcrypt = require("bcrypt");
 
 const getAllUser = (req, res) => {
   console.log("Get all `users");
@@ -30,7 +31,12 @@ const getUserById = (req, res) => {
 const createUser = (req, res) => {
   console.log("Create new user", req.body);
   try {
-    const newUser = { id: uuidv4(), ...req.body };
+    const newUser = {
+      id: uuidv4(),
+      ...req.body,
+      password: bcrypt.hashSync("pass123", 10),
+    };
+    bcrypt.compare;
     const users = readFile("users.json");
     users.push(newUser);
     writeFile("users.json", users);

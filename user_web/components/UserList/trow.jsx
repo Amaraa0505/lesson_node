@@ -1,6 +1,6 @@
 import React from "react";
 
-const TRow = ({ user, setRefresh, refresh }) => {
+const TRow = ({ user, handleUpdate, handleDelete }) => {
   const getDepartment = (department) => {
     switch (department) {
       case "human resource": {
@@ -26,28 +26,6 @@ const TRow = ({ user, setRefresh, refresh }) => {
       }
     }
   };
-
-  const deleteChange = async (userId)=> { // 2
-    // const index = users.findIndex((u)=> u.id === userId); // [ {name :naraa, id:1}, {name: saraa, id:2} ] => 1
-    // if (index !== -1){
-    //   const updateUsers = [...users]; // [ {name :naraa, id:1}, {name: saraa, id:2}  ]
-    //   updatedUsers.splice(index, 1); //  1, 1 => [ {name :naraa, id:1} ]  ]
-    // }
-    try{
-      const {message} = await fetch(`http://localhost:8008/api/users/${userId}`,{
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }
-      )
-    }catch(error){
-      console.log(error)
-    }finally{
-      setRefresh(!refresh);
-    }
-  };
-
   return (
     <tr className="hover:bg-slate-100">
       <td>
@@ -73,8 +51,15 @@ const TRow = ({ user, setRefresh, refresh }) => {
       </td>
       <td>{getDepartment(user.department)}</td>
       <td>
-        <button className=" btn btn-warning  mx-2">засах</button>
-        <button className="  btn btn-error " onClick={deleteChange.bind(this, user.id)}>устгах</button>
+        <button
+          className=" btn btn-warning  mx-2"
+          onClick={() => handleUpdate(user.id)}
+        >
+          засах
+        </button>
+        <button className="btn btn-error" onClick={() => handleDelete(user.id)}>
+          устгах
+        </button>
       </td>
     </tr>
   );
