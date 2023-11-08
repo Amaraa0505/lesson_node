@@ -14,7 +14,7 @@ const getAllUser = (req, res) => {
 
 const getUserById = (req, res) => {
   console.log("Get an user by ID");
-
+3
   try {
     const users = readFile("users.json");
     const findUser = users.filter((user) => user.id === req.params.userId);

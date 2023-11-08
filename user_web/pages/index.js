@@ -85,14 +85,14 @@ export default function Home() {
           Шинэ хэрэглэгч нэмэх {count}
         </button>
       </div>
-      <Form
+     {open && <Form
         open={open}
         closeForm={closeForm}
         selectedUser={selectedUser}
         setSelectedUser={setSelectedUser}
         refresh={refresh}
         setRefresh={setRefresh}
-      />
+      />}
       <UserList
         users={userList}
         handleUpdate={handleUpdate}
